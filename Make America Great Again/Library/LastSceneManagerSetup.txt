@@ -1,16 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/StageSelect.unity
-=======
-<<<<<<< HEAD
-- path: Assets/MainScene.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/StageSelect.unity
-=======
-- path: Assets/MainScene.unity
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
   isLoaded: 1
   isActive: 1
