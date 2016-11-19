@@ -16,6 +16,11 @@ public class StageSelectNewEnglandScript : MonoBehaviour {
         this.GetComponent<SpriteRenderer>().color = colorOff;
     }
 
+    void OnMouseDown()
+    {
+
+    }
+
     // Use this for initialization
     void Start()
     {
