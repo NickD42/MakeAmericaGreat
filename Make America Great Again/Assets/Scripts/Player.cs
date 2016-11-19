@@ -62,7 +62,7 @@ public class Player : MonoBehaviour {
 	}
     void OnTriggerEnter2D(Collider2D Col)
     {
-        if (Col.tag == "Enemy" || Col.tag == "Boss")
+        if (Col.tag == "Enemy")
         {
             Destroy(gameObject);
         }

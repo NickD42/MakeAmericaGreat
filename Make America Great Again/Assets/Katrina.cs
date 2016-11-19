@@ -3,7 +3,12 @@ using System.Collections;
 
 public class Katrina : MonoBehaviour {
     Vector2 BossPos;
+
     char dir;
+    public GameObject sharkRight;
+    public GameObject sharkLeft;
+    public float fireRate;
+    float nextFire;
     //public GameObject upper, lower;
     //public Transform otherBulletSpawn;
     //int health, lowerHealth, upperHealth;
@@ -24,8 +29,11 @@ public class Katrina : MonoBehaviour {
     void Update()
     {
         timer+=Time.deltaTime;
+
         if (timer > 3)
         {
+            shootLeft();
+            shootRight();
             timer = 0f;
             int randDirChange =Random.Range(1,4);
             switch(randDirChange)
@@ -95,11 +103,35 @@ public class Katrina : MonoBehaviour {
 
 
         }
+
         //Health();
     }
 
+    void shootRight()
+    {
+        nextFire = fireRate;
+        Vector3 Offset = new Vector3(2, 0, 0);
+        //GameObject newbullet = (GameObject)Instantiate (bullet);
+        //newbullet.transform.position = BulletSpawn.transform.position; 
+        GameObject newbullet = (GameObject)Instantiate(sharkRight, transform.position + Offset, transform.rotation);
 
+    }
+    void shootLeft()
+    {
+        Vector3 Offset = new Vector3(2, 0, 0);
+        //GameObject newbullet = (GameObject)Instantiate (bullet);
+        //newbullet.transform.position = BulletSpawn.transform.position; 
+        GameObject newbullet = (GameObject)Instantiate(sharkLeft, transform.position + Offset, transform.rotation);
+    }
+    void OnTriggerEnter2D(Collider2D Col)
+    {
+        if (Col.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+        //Detect collision between object A and object B
 
+    }
     void Health()
     {
         //&& upper.GetComponent<NeptuneColLowerBoss>().health<0
