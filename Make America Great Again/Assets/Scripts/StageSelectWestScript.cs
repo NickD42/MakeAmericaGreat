@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SelectStageScript : MonoBehaviour {
+public class StageSelectWestScript : MonoBehaviour {
 
     Color colorOn;
     Color colorOff;
@@ -17,17 +17,17 @@ public class SelectStageScript : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         colorOn = this.GetComponent<SpriteRenderer>().color;
         colorOff = this.GetComponent<SpriteRenderer>().color;
         colorOff.a = 0f;
         this.GetComponent<SpriteRenderer>().color = colorOff;
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        
+
     }
 }
