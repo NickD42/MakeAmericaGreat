@@ -5,15 +5,6 @@ public class Harambe : MonoBehaviour {
     Vector2 BossPos;
 
     char dir;
-    //public GameObject sharkRight;
-    //public GameObject sharkLeft;
-    //public float fireRate;
-    //float nextFire;
-    //public GameObject upper, lower;
-    //public Transform otherBulletSpawn;
-    //int health, lowerHealth, upperHealth;
-    //float BossFire = 0;
-    //public Sprite almostDead;
     private float speed;
     // Use this for initialization
     private float timer;
@@ -99,29 +90,8 @@ public class Harambe : MonoBehaviour {
                     }
                 }
                 break;
-
-
         }
-
-        //Health();
     }
-
-    //void shootRight()
-    //{
-    //    nextFire = fireRate;
-    //    Vector3 Offset = new Vector3(2, 0, 0);
-    //    //GameObject newbullet = (GameObject)Instantiate (bullet);
-    //    //newbullet.transform.position = BulletSpawn.transform.position; 
-    //    GameObject newbullet = (GameObject)Instantiate(sharkRight, transform.position + Offset, transform.rotation);
-
-    //}
-    //void shootLeft()
-    //{
-    //    Vector3 Offset = new Vector3(2, 0, 0);
-    //    //GameObject newbullet = (GameObject)Instantiate (bullet);
-    //    //newbullet.transform.position = BulletSpawn.transform.position; 
-    //    GameObject newbullet = (GameObject)Instantiate(sharkLeft, transform.position + Offset, transform.rotation);
-    //}
     void OnTriggerEnter2D(Collider2D Col)
     {
         if (Col.tag == "Player")
@@ -131,6 +101,7 @@ public class Harambe : MonoBehaviour {
         //Detect collision between object A and object B
 
     }
+
     void Health()
     {
         //&& upper.GetComponent<NeptuneColLowerBoss>().health<0
