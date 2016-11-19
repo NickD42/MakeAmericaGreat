@@ -6,10 +6,11 @@ public class GameManager : MonoBehaviour {
     public GameObject Hillary;
     public GameObject Trump;
     bool character;
-    short LevelsCompleted;
+    public short LevelsCompleted = 1;
     // Use this for initialization
 	void Awake () {
         DontDestroyOnLoad(this);
+        LevelsCompleted = 2;
     }
 	
 	// Update is called once per frame
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour {
     public void SetCharacter(bool arg_character)
     {
         character = arg_character;
+        SceneManager.LoadScene("StageSelect");
 
 
         switch (character)
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour {
                 Trump = GameObject.Instantiate(Trump);
                 break;
         }SceneManager.LoadScene("MainScene");
+
     }
         
 }
