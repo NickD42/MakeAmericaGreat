@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public Sprite TheDonald;
 	// Use this for initialization
 	void Start() {
+        DontDestroyOnLoad(this);
         Pposition = transform.position;
         charSprite = GetComponent<SpriteRenderer>().sprite;
 	}
@@ -32,29 +33,29 @@ public class Player : MonoBehaviour {
        if(Input.GetKey(KeyCode.W))
         {
             Pposition.y += speed;
-            Debug.Log("up");
+            //Debug.Log("up");
         }
         if (Input.GetKey(KeyCode.A))
         {
             Pposition.x -= speed;
-            Debug.Log("left");
+            ///Debug.Log("left");
         }
         if (Input.GetKey(KeyCode.S))
         {
             Pposition.y -= speed;
-            Debug.Log("down");
+            ///Debug.Log("down");
         }
         if (Input.GetKey(KeyCode.D))
         {
             Pposition.x += speed;
-            Debug.Log("right");
+            ///Debug.Log("right");
         }
         transform.position = Pposition;
     }
 	// Update is called once per frame
 	void Update () {
         move();
-        SwitchSprite();
+        //SwitchSprite();
 	}
     
 }
