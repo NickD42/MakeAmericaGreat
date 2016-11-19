@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 sceneSetups:
-- path: Assets/Scenes/MidWest.unity
+- path: Assets/Scenes/West.unity
   isLoaded: 1
   isActive: 1
-=======
-sceneSetups: []
->>>>>>> origin/master

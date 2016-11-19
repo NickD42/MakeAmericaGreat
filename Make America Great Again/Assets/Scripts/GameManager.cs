@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
     public GameObject Trump;
     bool character;
     public short LevelsCompleted = 1;
+    public short lives = 3;
+    public short HP = 3;
     // Use this for initialization
 	void Awake () {
         DontDestroyOnLoad(this);
