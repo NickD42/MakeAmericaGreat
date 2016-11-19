@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
     public Sprite charSprite;
     public Sprite Hilory;
     public Sprite TheDonald;
+   
 	// Use this for initialization
 	void Start() {
         DontDestroyOnLoad(this);
