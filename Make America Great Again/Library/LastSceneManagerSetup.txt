@@ -1,4 +1,20 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/South.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/CharacterSelect.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/MidWest.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/CharacterSelect.unity
+=======
+- path: Assets/Scenes/StageSelect.unity
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
   isLoaded: 1
   isActive: 1
