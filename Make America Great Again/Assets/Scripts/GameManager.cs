@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     bool character;
-    short LevelsCompleted;
+    public short LevelsCompleted;
     // Use this for initialization
 	void Awake () {
         DontDestroyOnLoad(transform.gameObject);
@@ -20,6 +20,6 @@ public class GameManager : MonoBehaviour {
     void SetCharacter(bool arg_character)
     {
         character = arg_character;
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("StageSelect");
     }
 }
