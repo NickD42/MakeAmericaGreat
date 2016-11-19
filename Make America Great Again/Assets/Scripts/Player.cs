@@ -31,26 +31,28 @@ public class Player : MonoBehaviour {
     }
    void move()
     {
-       if(Input.GetKey(KeyCode.W))
+        if (Input.GetAxisRaw("Vertical") > 0.5)
         {
             Pposition.y += speed;
             //Debug.Log("up");
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetAxisRaw("Horizontal") < -0.5)
         {
             Pposition.x -= speed;
-            ///Debug.Log("left");
+            //Debug.Log("left");
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetAxisRaw("Vertical") < -0.5)
         {
             Pposition.y -= speed;
-            ///Debug.Log("down");
+            //Debug.Log("down");
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetAxisRaw("Horizontal") > 0.5)
         {
             Pposition.x += speed;
-            ///Debug.Log("right");
+            //Debug.Log("right");
         }
+        //Debug.Log(Input.GetAxisRaw("Horizontal"));
+        //Debug.Log(Input.GetAxisRaw("Vertical"));
         transform.position = Pposition;
     }
 	// Update is called once per frame
