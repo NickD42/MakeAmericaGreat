@@ -3,32 +3,31 @@ using System.Collections;
 
 public class SelectStageScript : MonoBehaviour {
 
-    Ray ray;
-    RaycastHit hit;
+    Color colorOn;
+    Color colorOff;
 
-    Color tmp;
+    void OnMouseEnter()
+    {
+        this.GetComponent<SpriteRenderer>().color = colorOn;
+    }
+
+    void OnMouseExit()
+    {
+        this.GetComponent<SpriteRenderer>().color = colorOff;
+    }
 
     // Use this for initialization
     void Start ()
     {
-        tmp = this.GetComponent<SpriteRenderer>().color;
-        tmp.a = 0f;
-        this.GetComponent<SpriteRenderer>().color = tmp;
+        colorOn = this.GetComponent<SpriteRenderer>().color;
+        colorOff = this.GetComponent<SpriteRenderer>().color;
+        colorOff.a = 0f;
+        this.GetComponent<SpriteRenderer>().color = colorOff;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
-        {
-            Color tmp = this.GetComponent<SpriteRenderer>().color;
-            tmp.a = 100f;
-            this.GetComponent<SpriteRenderer>().color = tmp;
-        }
-        else
-        {
-
-        }
+        
     }
 }
