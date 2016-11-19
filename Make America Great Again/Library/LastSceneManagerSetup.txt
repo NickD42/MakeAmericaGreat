@@ -1,12 +1,1 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/West.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/MidWest.unity
-=======
-- path: Assets/Scenes/MainScene.unity
->>>>>>> origin/master
->>>>>>> origin/master
-  isLoaded: 1
-  isActive: 1
+sceneSetups: []
