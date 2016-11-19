@@ -60,5 +60,13 @@ public class Player : MonoBehaviour {
         move();
         //SwitchSprite();
 	}
-    
+    void OnTriggerEnter2D(Collider2D Col)
+    {
+        if (Col.tag == "Enemy" || Col.tag == "Boss")
+        {
+            Destroy(gameObject);
+        }
+        //Detect collision between object A and object B
+
+    }
 }

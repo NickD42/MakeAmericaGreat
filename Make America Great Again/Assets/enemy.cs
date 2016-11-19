@@ -13,15 +13,7 @@ public class enemy : MonoBehaviour {
         protester = GetComponent<SpriteRenderer>().sprite;
 	}
 
-    //bool facingLeft(bool facingdirection)
-    //{
-    //    if (facingdirection)
-    //    {
-    //        return true;
-    //    }
-    //    else return false;
-            
-    //}
+ 
 	
 	// Update is called once per frame
 	void Update () {
@@ -99,5 +91,14 @@ public class enemy : MonoBehaviour {
 
 
         }
+    }
+    void OnTriggerEnter2D(Collider2D Col)
+    {
+        if (Col.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+        //Detect collision between object A and object B
+
     }
 }
